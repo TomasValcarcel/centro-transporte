@@ -1,0 +1,584 @@
+:root {
+    --rojo-109: #d52b1e;
+    --azul-secundario: #0c2340;
+    --blanco: #ffffff;
+    --oro-filete: #f2a900;
+    --fondo-gris: #f7fafc;
+    --texto-oscuro: #1a202c;
+    --verde-ok: #2f855a;
+}
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--fondo-gris);
+    color: var(--texto-oscuro);
+    line-height: 1.6;
+}
+ 
+h1, h2, h3 {
+    font-family: 'Rokkitt', serif;
+}
+ 
+a {
+    text-decoration: none;
+}
+ 
+img {
+    max-width: 100%;
+    display: block;
+}
+ 
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+ 
+/* ===== HEADER ===== */
+.header-principal {
+    background-color: var(--azul-secundario);
+    color: var(--blanco);
+    padding: 15px 0;
+    border-bottom: 5px solid var(--oro-filete);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+ 
+.header-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+ 
+.logo-terminal {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--blanco);
+}
+ 
+.logo-terminal .icono-bus {
+    font-size: 2rem;
+}
+ 
+.logo-terminal .marca {
+    line-height: 1.1;
+}
+ 
+.logo-terminal .marca strong {
+    font-family: 'Rokkitt', serif;
+    font-size: 1.3rem;
+    display: block;
+}
+ 
+.logo-terminal .marca span {
+    font-size: 0.8rem;
+    color: var(--oro-filete);
+}
+ 
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+ 
+.menu a {
+    color: var(--blanco);
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+ 
+.menu a:hover, .menu a.activo {
+    background-color: var(--rojo-109);
+    color: var(--blanco);
+}
+ 
+/* ===== HERO ===== */
+.hero {
+    background-color: var(--azul-secundario);
+    color: var(--blanco);
+    padding: 70px 20px;
+    text-align: center;
+    border-bottom: 8px double var(--oro-filete);
+}
+ 
+.hero h2 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    color: var(--oro-filete);
+}
+ 
+.hero p {
+    font-size: 1.15rem;
+    max-width: 650px;
+    margin: 0 auto 30px auto;
+}
+ 
+.hero-acciones {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+ 
+.btn-primario {
+    display: inline-block;
+    background-color: var(--rojo-109);
+    color: var(--blanco);
+    padding: 15px 30px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid var(--blanco);
+    transition: 0.3s;
+    cursor: pointer;
+}
+ 
+.btn-primario:hover {
+    background-color: var(--oro-filete);
+    color: var(--azul-secundario);
+    border-color: var(--azul-secundario);
+}
+ 
+.btn-secundario {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--blanco);
+    padding: 15px 30px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid var(--oro-filete);
+    transition: 0.3s;
+    cursor: pointer;
+}
+ 
+.btn-secundario:hover {
+    background-color: var(--oro-filete);
+    color: var(--azul-secundario);
+}
+ 
+/* ===== ESTADO SERVICIO ===== */
+.estado-servicio {
+    margin-top: -30px;
+    position: relative;
+}
+ 
+.tarjeta-estado {
+    background-color: var(--blanco);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-left: 6px solid var(--oro-filete);
+}
+ 
+.alerta-normal {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+    color: var(--verde-ok);
+    font-weight: 600;
+}
+ 
+/* ===== SECCIONES GENERALES ===== */
+.titulo-seccion {
+    text-align: center;
+    color: var(--azul-secundario);
+    font-size: 2.2rem;
+    margin: 60px 0 15px 0;
+}
+ 
+.bajada-seccion {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1rem;
+    color: #4a5568;
+}
+ 
+.seccion-interna { padding: 50px 20px; }
+ 
+/* ===== ACCESOS DIRECTOS (home) ===== */
+.grid-accesos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+ 
+.card-acceso {
+    background-color: var(--blanco);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    border-top: 4px solid var(--rojo-109);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: 0.25s;
+    color: inherit;
+    display: block;
+}
+ 
+.card-acceso:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    border-top-color: var(--oro-filete);
+}
+ 
+.card-acceso .icono {
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+    display: block;
+}
+ 
+.card-acceso h3 {
+    color: var(--azul-secundario);
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+ 
+.card-acceso p {
+    font-size: 0.95rem;
+    color: #4a5568;
+}
+ 
+/* ===== TRANSPORTES INTEGRADOS ===== */
+.grid-transportes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+}
+ 
+.card-transporte {
+    background-color: var(--blanco);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid var(--azul-secundario);
+    transition: 0.3s;
+}
+ 
+.card-transporte:hover { border-color: var(--rojo-109); }
+ 
+.card-transporte .franja {
+    background-color: var(--rojo-109);
+    color: var(--blanco);
+    padding: 20px;
+    text-align: center;
+}
+ 
+.card-transporte .franja h3 {
+    font-size: 1.4rem;
+}
+ 
+.card-transporte .cuerpo {
+    padding: 20px;
+}
+ 
+.card-transporte .cuerpo p {
+    color: #4a5568;
+    margin-bottom: 15px;
+}
+ 
+/* ===== CONSULTA DE VIAJES ===== */
+.formulario-consulta {
+    max-width: 650px;
+    margin: 0 auto 40px auto;
+    background-color: var(--blanco);
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-bottom: 5px solid var(--azul-secundario);
+}
+ 
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-weight: 600; margin-bottom: 8px; color: var(--azul-secundario); }
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+ 
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--rojo-109);
+}
+ 
+.resultado-consulta {
+    max-width: 650px;
+    margin: 0 auto 50px auto;
+    display: none;
+}
+ 
+.resultado-consulta.visible { display: block; }
+ 
+.tarjeta-resultado {
+    background-color: var(--blanco);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-top: 6px solid var(--oro-filete);
+}
+ 
+.tarjeta-resultado .franja-resultado {
+    background-color: var(--azul-secundario);
+    color: var(--blanco);
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+ 
+.tarjeta-resultado .franja-resultado h3 {
+    font-size: 1.3rem;
+}
+ 
+.grid-datos-viaje {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1px;
+    background-color: #e2e8f0;
+}
+ 
+.dato-viaje {
+    background-color: var(--blanco);
+    padding: 20px;
+    text-align: center;
+}
+ 
+.dato-viaje .etiqueta-dato {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #718096;
+    margin-bottom: 6px;
+}
+ 
+.dato-viaje .valor-dato {
+    font-family: 'Rokkitt', serif;
+    font-size: 1.3rem;
+    color: var(--azul-secundario);
+    font-weight: bold;
+}
+ 
+.alerta-error {
+    background-color: #fff5f5;
+    border-left: 6px solid var(--rojo-109);
+    padding: 20px;
+    border-radius: 8px;
+    color: #9b2c2c;
+    font-weight: 600;
+}
+ 
+/* ===== SERVICIOS ===== */
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+ 
+.card-servicio {
+    background-color: var(--blanco);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid var(--rojo-109);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+ 
+.card-servicio h3 {
+    color: var(--azul-secundario);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+ 
+.card-servicio .horario {
+    display: inline-block;
+    background-color: var(--oro-filete);
+    color: var(--azul-secundario);
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-top: 8px;
+}
+ 
+/* ===== CHATBOT FAQ ===== */
+.chatbot-caja {
+    max-width: 700px;
+    margin: 0 auto 60px auto;
+    background-color: var(--blanco);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    border-top: 5px solid var(--oro-filete);
+}
+ 
+.chatbot-header {
+    background-color: var(--azul-secundario);
+    color: var(--blanco);
+    padding: 18px 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+ 
+.chatbot-header h3 { font-size: 1.2rem; }
+ 
+.chatbot-mensajes {
+    height: 280px;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: var(--fondo-gris);
+}
+ 
+.mensaje {
+    max-width: 80%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+}
+ 
+.mensaje.bot {
+    background-color: var(--blanco);
+    align-self: flex-start;
+    border: 1px solid #e2e8f0;
+}
+ 
+.mensaje.usuario {
+    background-color: var(--rojo-109);
+    color: var(--blanco);
+    align-self: flex-end;
+}
+ 
+.chatbot-preguntas {
+    padding: 15px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    border-top: 1px solid #e2e8f0;
+}
+ 
+.chip-pregunta {
+    background-color: var(--fondo-gris);
+    border: 2px solid var(--azul-secundario);
+    color: var(--azul-secundario);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+ 
+.chip-pregunta:hover {
+    background-color: var(--azul-secundario);
+    color: var(--blanco);
+}
+ 
+/* ===== MAPA ===== */
+.mapa-terminal-caja {
+    max-width: 950px;
+    margin: 0 auto 30px auto;
+    background-color: var(--blanco);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 4px solid var(--azul-secundario);
+    padding: 20px;
+    overflow-x: auto;
+}
+ 
+.leyenda-mapa {
+    max-width: 950px;
+    margin: 0 auto 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+}
+ 
+.item-leyenda {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--blanco);
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+ 
+.punto-leyenda {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+ 
+/* ===== FOOTER ===== */
+.footer-principal {
+    background-color: var(--azul-secundario);
+    color: var(--blanco);
+    padding: 40px 0 20px 0;
+    margin-top: 50px;
+    border-top: 3px solid var(--oro-filete);
+}
+ 
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+ 
+.footer-enlaces ul {
+    list-style: none;
+}
+ 
+.footer-enlaces a {
+    color: var(--blanco);
+    opacity: 0.85;
+}
+ 
+.footer-enlaces a:hover {
+    opacity: 1;
+    color: var(--oro-filete);
+}
+ 
+.footer-legal {
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+ 
+@media (max-width: 768px) {
+    .header-grid { flex-direction: column; text-align: center; }
+    .footer-grid { flex-direction: column; text-align: center; }
+    .hero h2 { font-size: 2rem; }
+}
